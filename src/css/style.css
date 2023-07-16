@@ -1,0 +1,18 @@
+.header {
+  width: 600px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.bgImg {
+  width: 600px;
+  height: 380px;
+  background-image: url("../img/sunflower.png");
+  background-size: contain;
+}
+
+#app {
+  width: 600px;
+  height: 380px;
+  background-color: lightcoral;
+}
