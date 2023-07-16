@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open --config webpack.config.js"
+    "start": "webpack-dev-server --mode development --open --config webpack.config.js",
+    "dev": "webpack-dev-server --mode development --config webpack.config.js"
   },
   "sideEffects": [
     "@babel/polyfill",
@@ -17,12 +18,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.23",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "style-loader": "^3.3.3",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"

@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+//vue-loader配置
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
   mode: "development",
@@ -27,6 +29,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -66,6 +72,9 @@ module.exports = {
 
     // 每次打包前清除dist目录
     new CleanWebpackPlugin(),
+
+    // vue-loader配置
+    new VueLoaderPlugin(),
   ],
   optimization: {
     // 代码压缩
